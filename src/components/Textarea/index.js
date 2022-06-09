@@ -36,8 +36,8 @@ const Textarea = () => {
 
           <Textwrapper marginBottom="0px">
               <TextHeading marginBottom = "70px">Your text summary</TextHeading>
-              <p><Strong>{txt.split(/\s+/).length - 1}</Strong> words and <Strong>{txt.length} characters</Strong></p>
-              <p><Strong>{Math.round((txt.split(/\s+/).length - 1)*0.8)/100}</Strong> Minutes read</p>
+              <p><Strong>{txt.split(/\s+/).length - 1} words</Strong> and <Strong>{txt.length} characters</Strong></p>
+              <p><Strong>{Math.round((txt.split(/\s+/).length - 1)*0.8)/100} Minutes</Strong> read</p>
           </Textwrapper>
 
           <Textwrapper marginBottom="70px">

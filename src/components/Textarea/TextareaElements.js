@@ -47,4 +47,5 @@ export const TextareaBtn = styled.button`
 
 export const Strong = styled.strong`
     color: #215ab8;
+    font-size: 1.3rem;
 `
