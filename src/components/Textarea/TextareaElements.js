@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { NavBtnLink } from "../Navbar/NavbarElements"
 
 export const Textwrapper = styled.div`
     max-width: 90vw;
@@ -24,19 +25,9 @@ export const Text = styled.textarea`
     }
 `
 
-export const TextareaBtn = styled.button`
-    border-radius: 4px;
-    background: #256ce1;
-    padding: 10px 22px;
-    margin-top: 30px;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    color: #fff;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
+export const TextareaBtn = styled(NavBtnLink)`
+    margin: 20px 6px;
+    width: 110px;
 
     &:hover{
         transition: all 0.2s ease-in-out;
@@ -47,5 +38,5 @@ export const TextareaBtn = styled.button`
 
 export const Strong = styled.strong`
     color: #215ab8;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 `

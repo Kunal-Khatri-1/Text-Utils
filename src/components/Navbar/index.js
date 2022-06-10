@@ -11,7 +11,7 @@ const Navbar = () => {
               src= {logo} 
               alt="Logo"
               style={{
-                height: "80%"
+                height: "100%"
               }} 
             />
           </NavLink>
