@@ -4,7 +4,10 @@ import { NavBtnLink } from "../Navbar/NavbarElements"
 export const Textwrapper = styled.div`
     max-width: 90vw;
     width: 800px;
-    margin: 80px auto ${(props) => props.marginBottom} auto;
+    margin: 80px auto ${(props) => {
+        console.log(props, "hey hey")
+        return (props.marginBottom)
+        }} auto;
 `
 
 export const TextHeading = styled.h1`
@@ -17,7 +20,10 @@ export const Text = styled.textarea`
     height: 290px;
     resize: vertical;
     border-radius: 2px;
-    padding: 4px;
+    padding: ${(props) => {
+        console.log(props);
+        return("4px")
+        }};
 
     &:focus{
         outline: none !important;
