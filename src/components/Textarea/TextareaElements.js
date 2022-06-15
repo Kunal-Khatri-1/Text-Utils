@@ -5,7 +5,6 @@ export const Textwrapper = styled.div`
     max-width: 90vw;
     width: 800px;
     margin: 80px auto ${(props) => {
-        console.log(props, "hey hey")
         return (props.marginBottom)
         }} auto;
 `
@@ -21,7 +20,6 @@ export const Text = styled.textarea`
     resize: vertical;
     border-radius: 2px;
     padding: ${(props) => {
-        console.log(props);
         return("4px")
         }};
 

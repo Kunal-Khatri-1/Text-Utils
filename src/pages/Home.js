@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Navbar from '../components/Navbar/index.js'
 import Textarea from '../components/Textarea/index.js'
 
