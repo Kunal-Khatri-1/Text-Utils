@@ -37,7 +37,7 @@ const Textarea = () => {
 
     return (
       <>
-          <Textwrapper marginBottom = "0px">
+          <Textwrapper padBottom = "0px">
               <TextHeading>Enter the text to analyze below</TextHeading>
               <Text
                 ref={textArea}
@@ -67,14 +67,14 @@ const Textarea = () => {
 
           </Textwrapper>
 
-          <Textwrapper marginBottom="0px">
-              <TextHeading marginBottom = "70px">Your text summary</TextHeading>
+          <Textwrapper padBottom="0px">
+              <TextHeading padBottom = "70px">Your text summary</TextHeading>
               <p><Strong>{txt.split(/\s+/).length - 1} words </Strong>and<Strong> {txt.length} characters</Strong></p>
               <p><Strong>{Math.round((txt.split(/[ ]\s+/).length - 1)*0.8)/100} Minutes </Strong>read</p>
           </Textwrapper>
 
-          <Textwrapper marginBottom="70px">
-              <TextHeading marginBottom = "70px">Preview</TextHeading>
+          <Textwrapper padBottom="70px">
+              <TextHeading padBottom = "70px">Preview</TextHeading>
                 {
                     txt.split(/\n/).map((element, index) => {
                         return(

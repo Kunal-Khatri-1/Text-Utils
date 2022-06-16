@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const AccordianWrapper = styled.div`
   display: flex;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 60px);
   width: 100vw;
   justify-content: center;
   align-items: center;
@@ -25,12 +25,16 @@ export const Title = styled.div`
   align-items: center;
   cursor: pointer;
 
-  &:hover{
-    color: #215ab8;
+  &:hover h2{
+    color: #256ce1;
+  }
+
+  &:hover span{
+    color: #256ce1;
   }
 
   &.show{
-    color: #215ab8;
+    color: #256ce1;
   }
 
   span{
@@ -39,7 +43,7 @@ export const Title = styled.div`
   }
 `
 
-export const Content = styled.div`
+export const Content = styled.p`
 
   &.content{
     max-height: 0;

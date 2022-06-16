@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import {
   Nav,
   NavWrapper,
@@ -9,14 +9,14 @@ import {
   NavBtnLink,
 } from "./NavbarElements";
 import logo from "../../images/logo/logo.png";
-import noteContext from "../../context/noteContext";
+
 import Toggle from "./DMToggleBtn/index";
 
 const Navbar = () => {
-  const {darkMode, toggleDarkMode} = useContext(noteContext);
+
   return (
     <>
-      <Nav mode={darkMode.toString()}>
+      <Nav>
         <NavWrapper className="wrapper">
           <NavLink to="/">
             <img
@@ -29,16 +29,16 @@ const Navbar = () => {
           </NavLink>
           <Bars />
           <NavMenu>
-            <NavLink to="/about" activeStyle>
+            <NavLink to="/about">
               About
             </NavLink>
-            <NavLink to="/services" activeStyle>
+            <NavLink to="/services">
               Services
             </NavLink>
-            <NavLink to="/contact-us" activeStyle>
+            <NavLink to="/contact-us">
               Contact Us
             </NavLink>
-            <NavLink to="/sign-up" activeStyle>
+            <NavLink to="/sign-up">
               Sign up
             </NavLink>
           </NavMenu>
@@ -46,7 +46,7 @@ const Navbar = () => {
             <NavBtnLink to="/sign-in">Sign in</NavBtnLink>
           </NavBtn>
         </NavWrapper>
-        <Toggle toggled={darkMode} click={toggleDarkMode} />
+        <Toggle />
       </Nav>
     </>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {
-  Wrapper,
+  AccordianWrapper,
   AccordianDiv,
   Item,
   Title,
@@ -20,12 +20,18 @@ const Accordian = () => {
     setSelected(index);
   }
 
+  const closeContent = (e) => {
+    if (e.target.id === "AccordianWrapper") {
+      setSelected(null);
+    }
+  }
+
   return (
-    <Wrapper>
+    <AccordianWrapper onClick={closeContent} id="AccordianWrapper">
       <AccordianDiv>
         {Data.map((element, index) => {
           return (
-            <Item>
+            <Item key={index}>
               <Title onClick={() => toggle(index)} className={selected === index ? "show" : ""}>
                 <h2>{element.question}</h2>
                 <span>{selected === index ? "-" : "+"}</span>
@@ -35,7 +41,7 @@ const Accordian = () => {
           );
         })}
       </AccordianDiv>
-    </Wrapper>
+    </AccordianWrapper>
   );
 };
 

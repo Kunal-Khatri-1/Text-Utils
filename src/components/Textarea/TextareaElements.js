@@ -4,9 +4,8 @@ import { NavBtnLink } from "../Navbar/NavbarElements"
 export const Textwrapper = styled.div`
     max-width: 90vw;
     width: 800px;
-    margin: 80px auto ${(props) => {
-        return (props.marginBottom)
-        }} auto;
+    margin: 0px auto;
+    padding: 90px 0 ${({padBottom}) => padBottom} 0;
 `
 
 export const TextHeading = styled.h1`
