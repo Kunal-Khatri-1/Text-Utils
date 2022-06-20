@@ -8,22 +8,25 @@ import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
 import Error from "./pages/Error";
 import NoteState from "./context/NoteState";
+import AlertState from "./context/AlertState";
 
 function App() {
   return (
-    <NoteState>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/sign-up" element={<Signup />} />
-          <Route path="/sign-in" element={<Signin />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
-      </Router>
-    </NoteState>
+    <AlertState>
+      <NoteState>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/sign-up" element={<Signup />} />
+            <Route path="/sign-in" element={<Signin />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+        </Router>
+      </NoteState>
+    </AlertState>
   );
 }
 

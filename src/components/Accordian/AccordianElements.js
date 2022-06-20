@@ -6,18 +6,19 @@ export const AccordianWrapper = styled.div`
   width: 100vw;
   justify-content: center;
   align-items: center;
-`
+`;
 
 export const AccordianDiv = styled.div`
   width: 500px;
-`
+`;
 
 export const Item = styled.div`
-  background-color: #e9e9e9;
+  box-shadow: 4px 4px 4px #256ce1;
+  background-color: whitesmoke;
   margin-bottom: 10px;
   padding: 20px 20px;
   border-radius: 4px;
-`
+`;
 
 export const Title = styled.div`
   display: flex;
@@ -25,36 +26,35 @@ export const Title = styled.div`
   align-items: center;
   cursor: pointer;
 
-  &:hover h2{
+  &:hover h2 {
     color: #256ce1;
   }
 
-  &:hover span{
+  &:hover span {
     color: #256ce1;
   }
 
-  &.show{
+  &.show {
     color: #256ce1;
   }
 
-  span{
+  span {
     font-size: 1.5rem;
     font-weight: bold;
   }
-`
+`;
 
 export const Content = styled.p`
-
-  &.content{
+  &.content {
     max-height: 0;
     overflow: hidden;
     transition: all 0.5s cubic-bezier(1, 0, 1, 0);
   }
 
-  &.show{
+  &.show {
     height: auto;
     max-height: 9999px;
     margin-top: 20px;
     transition: all 0.5s cubic-bezier(1, 0, 1, 0);
   }
-`
+`;

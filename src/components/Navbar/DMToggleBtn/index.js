@@ -3,10 +3,10 @@ import { Wrapper, ToggleDiv, Notch, Crater } from "./DmToggleBtnElements";
 import noteContext from "../../../context/noteContext";
 
 export default function Toggle() {
-  const {darkMode, toggleDarkMode} = useContext(noteContext);
+  const darkState = useContext(noteContext);
   return (
     <Wrapper className="wrapper">
-      <ToggleDiv onClick={toggleDarkMode} className={`toggle ${darkMode ? "night" : ""}`}>
+      <ToggleDiv onClick={() => darkState.toggleDarkMode.call(darkState)} className={`toggle ${darkState.darkMode ? "night" : ""}`}>
         <Notch className="notch">
           <Crater className="crater" />
           <Crater className="crater" />

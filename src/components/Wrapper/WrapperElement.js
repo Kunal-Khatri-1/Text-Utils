@@ -5,7 +5,7 @@ import { Text } from "../Textarea/TextareaElements";
 import { Item, Title } from "../Accordian/AccordianElements";
 
 const WrapperElem = styled.div`
-  background-color: ${({ darkMode }) => (darkMode ? "#040912" : "white")};
+  background-color: ${({ darkMode }) => (darkMode ? "#040912" : "#cfe1ff")};
 
   & h1 {
     color: ${({ darkMode }) => (darkMode ? "whitesmoke" : "#19202d")};
