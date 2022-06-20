@@ -74,6 +74,11 @@ export const NavMenu = styled.div`
   @media screen and (max-width: 760px) {
     display: none;
   }
+
+  @media screen and (max-width: 1024px){
+    flex-grow: 1;
+    margin-left: 29px;
+  }
 `;
 
 export const NavBtn = styled.button`
@@ -85,6 +90,10 @@ export const NavBtn = styled.button`
 
   @media screen and (max-width: 760px) {
     display: none;
+  }
+
+  @media screen and (max-width: 1024px){
+    margin: 0 36px;
   }
 `;
 

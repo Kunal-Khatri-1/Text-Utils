@@ -28,6 +28,7 @@ const Navbar = () => {
             />
           </NavLink>
           <Bars />
+          <div></div>
           <NavMenu>
             <NavLink to="/about">
               About
