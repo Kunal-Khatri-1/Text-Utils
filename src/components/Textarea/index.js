@@ -16,10 +16,8 @@ const Textarea = () => {
 
   const textArr = textVal.split(/\s+/);
   if (textArr[textArr.length - 1] === "") {
-    textArr.pop()
+    textArr.pop();
   }
-
-  console.log(textArr);
 
   function funcUpper() {
     const newTxt = txt.toUpperCase();
@@ -82,15 +80,27 @@ const Textarea = () => {
           value={txt}
           onChange={(e) => setTxt(e.target.value)}
         />
-        <TextareaBtn as="button" onClick={funcUpper} disabled={txt.length === 0}>
+        <TextareaBtn
+          as="button"
+          onClick={funcUpper}
+          disabled={txt.length === 0}
+        >
           UPPERCASE
         </TextareaBtn>
 
-        <TextareaBtn as="button" onClick={funcLower} disabled={txt.length === 0}>
+        <TextareaBtn
+          as="button"
+          onClick={funcLower}
+          disabled={txt.length === 0}
+        >
           lowercase
         </TextareaBtn>
 
-        <TextareaBtn as="button" onClick={funcClear} disabled={txt.length === 0}>
+        <TextareaBtn
+          as="button"
+          onClick={funcClear}
+          disabled={txt.length === 0}
+        >
           Clear
         </TextareaBtn>
 
@@ -98,7 +108,11 @@ const Textarea = () => {
           Copy
         </TextareaBtn>
 
-        <TextareaBtn as="button" onClick={funcRemoveExtraSpace} disabled={txt.length === 0}>
+        <TextareaBtn
+          as="button"
+          onClick={funcRemoveExtraSpace}
+          disabled={txt.length === 0}
+        >
           Space
         </TextareaBtn>
       </Textwrapper>
@@ -110,9 +124,7 @@ const Textarea = () => {
           <Strong> {txt.length} characters</Strong>
         </p>
         <p>
-          <Strong>
-            {Math.round(textArr.length * 0.8) / 100} Minutes{" "}
-          </Strong>
+          <Strong>{Math.round(textArr.length * 0.8) / 100} Minutes </Strong>
           read
         </p>
       </Textwrapper>
@@ -121,14 +133,16 @@ const Textarea = () => {
         <TextHeading padBottom="70px">Preview</TextHeading>
         {txt.split(/\n/).map((element, index) => {
           return (
-            <>
-              <pre key={index}>
-                {txt.length > 0
-                  ? element
-                  : "Nothing to preview"}
-              </pre>
-              <br />
-            </>
+            <pre
+              key={index}
+              style={{
+                whiteSpace: "pre-wrap",
+                wordWrap: "break-word",
+                marginBottom: "30px"
+              }}
+            >
+              {txt.length > 0 ? element : "Nothing to preview"}
+            </pre>
           );
         })}
       </Textwrapper>
