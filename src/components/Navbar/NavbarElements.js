@@ -29,6 +29,12 @@ export const NavLink = styled(Link)`
   cursor: pointer;
   font-size: 1rem;
   position: relative;
+
+  &#home{
+    padding: 0.5rem 0rem;
+    margin-left: 36px;
+    justify-content: flex-end;
+  }
 `;
 
 export const Bars = styled(FaBars)`
@@ -49,7 +55,8 @@ export const Bars = styled(FaBars)`
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
-  margin-right: -24px;
+  flex-grow: 0.6;
+  justify-content: center;
 
   & ${NavLink}::after {
     content: "";
@@ -71,13 +78,27 @@ export const NavMenu = styled.div`
     color: #15cdfc;
   }
 
-  @media screen and (max-width: 760px) {
-    display: none;
+  & button {
+    margin-left: 8px;
   }
 
-  @media screen and (max-width: 1024px){
-    flex-grow: 1;
-    margin-left: 29px;
+  @media screen and (max-width: 760px) {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    background: #040912;
+    flex-direction: column;
+    font-size: 1.3rem;
+    transform: translate(-100%);
+    transition: transform 0.5s ease;
+    
+    &.show{
+      left: 50vw;
+      transform: translate(-50%);
+    }
   }
 `;
 
@@ -89,15 +110,14 @@ export const NavBtn = styled.button`
   background: none;
 
   @media screen and (max-width: 760px) {
-    display: none;
+    font-size: 1.3rem;
   }
 
-  @media screen and (max-width: 1024px){
-    margin: 0 36px;
-  }
 `;
 
 export const NavBtnLink = styled(Link)`
+  width: 80px;
+  font-size: 1rem;
   border-radius: 4px;
   background: #256ce1;
   padding: 6px 12px;
@@ -114,3 +134,21 @@ export const NavBtnLink = styled(Link)`
     color: #256ce1;
   }
 `;
+
+export const RightNavDiv = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 36px ;
+
+  @media screen and (max-width: 760px) {
+    position: absolute;
+    top: 80px;
+    right: 100vw;
+    margin-right: 0px;
+    transition: all 0.5s ease;
+  }
+
+  &.show{
+      right: calc(20px);
+    }
+`

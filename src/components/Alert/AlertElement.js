@@ -8,7 +8,7 @@ export const AlertElem = styled.div`
     height: 40px;
     background-color: #28a745;
     max-width: 800px;
-    width: 30vw;
+    width: 50vw;
     border-radius: 4px;
     display: flex;
     align-items: center;

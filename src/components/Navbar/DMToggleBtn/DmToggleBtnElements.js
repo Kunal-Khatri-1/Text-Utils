@@ -4,11 +4,6 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 24px;
-
-  @media screen and (max-width: 760px) {
-    display: none;
-  }
 `;
 
 export const Crater = styled.div`
@@ -60,7 +55,6 @@ export const Notch = styled.div`
   left: 3px;
   box-shadow: 0 0 5px yellow;
   z-index: 1;
-  transition: all 0.3s ease;
 
   & .crater:nth-child(1) {
     right: 11px;
