@@ -21,6 +21,10 @@ const WrapperElem = styled.div`
     color: ${({ darkMode }) => (darkMode ? "whitesmoke" : "#19202d")};
   }
 
+  & pre {
+    color: ${({ darkMode }) => (darkMode ? "whitesmoke" : "#19202d")};
+  }
+
   & ${Item} {
     background-color: ${({ darkMode }) => (darkMode ? "#19202d" : "#e9e9e9")};
   }
