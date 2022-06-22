@@ -30,7 +30,7 @@ export const Text = styled.textarea`
 
 export const TextareaBtn = styled(NavBtnLink)`
     margin: 20px 6px;
-    width: 110px;
+    width: 148px;
     background-color: ${({disabled}) => disabled ? `rgba(37, 108, 225, 0.7)` : `rgba(37, 108, 225, 1)`};
 
     &:hover{

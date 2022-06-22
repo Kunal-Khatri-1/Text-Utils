@@ -28,6 +28,7 @@ const Accordian = () => {
 
   return (
     <AccordianWrapper onClick={closeContent} id="AccordianWrapper">
+      <div>
       <AccordianDiv>
         {Data.map((element, index) => {
           return (
@@ -41,6 +42,7 @@ const Accordian = () => {
           );
         })}
       </AccordianDiv>
+      </div>
     </AccordianWrapper>
   );
 };

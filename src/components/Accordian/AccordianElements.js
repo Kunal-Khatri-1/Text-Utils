@@ -2,20 +2,42 @@ import styled from "styled-components";
 
 export const AccordianWrapper = styled.div`
   display: flex;
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
+  padding: 40px 0px;
+  height: auto;
   width: 100vw;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 760px) {
+    &{
+      padding: 40px 0px;
+    }    
+  }
 `;
 
 export const AccordianDiv = styled.div`
   width: 500px;
+
+  @media screen and (max-width: 760px) {
+    &{
+      max-width: 90vw;
+    }
+
+    & h2 {
+      font-size: 1rem;
+    }
+
+    & p {
+      font-size: 0.7rem;
+    }
+  }
 `;
 
 export const Item = styled.div`
   box-shadow: 4px 4px 4px #256ce1;
   background-color: whitesmoke;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   padding: 20px 20px;
   border-radius: 4px;
 `;
