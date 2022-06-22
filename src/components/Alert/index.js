@@ -1,17 +1,16 @@
 import React, { useContext } from "react";
 import { AlertElem } from "./AlertElement";
-import { IconContext } from "react-icons";
-import AlertContext from "../../context/AlertContext";
+import noteContext from "../../context/noteContext";
 
 const Alert = () => {
-  const {alert} = useContext(AlertContext);
+  const { alert } = useContext(noteContext);
 
   return (
-    alert && <IconContext.Provider>
+    alert && (
       <AlertElem>
         <p>{alert}</p>
       </AlertElem>
-    </IconContext.Provider>
+    )
   );
 };
 

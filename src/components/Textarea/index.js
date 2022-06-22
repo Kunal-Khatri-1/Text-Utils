@@ -6,11 +6,11 @@ import {
   TextareaBtn,
   Strong,
 } from "./TextareaElements";
-import AlertContext from "../../context/AlertContext";
+import noteContext from "../../context/noteContext";
 
 const Textarea = () => {
   const [txt, setTxt] = useState("");
-  const { showAlert } = useContext(AlertContext);
+  const { showAlert } = useContext(noteContext);
   const textArea = useRef();
   const textVal = textArea.current === undefined ? "" : textArea.current.value;
 
@@ -19,14 +19,18 @@ const Textarea = () => {
     textArr.pop();
   }
 
+  function dismissAlert() {
+    setTimeout(() => {
+      showAlert(null);
+    }, 1500);
+  }
+
   function funcUpper() {
     const newTxt = txt.toUpperCase();
     setTxt(newTxt);
 
     showAlert("Converted to upper case");
-    setTimeout(() => {
-      showAlert(null);
-    }, 1500);
+    dismissAlert();
   }
 
   function funcLower() {
@@ -34,26 +38,20 @@ const Textarea = () => {
     setTxt(newTxt);
 
     showAlert("Converted to lower case");
-    setTimeout(() => {
-      showAlert(null);
-    }, 1500);
+    dismissAlert();
   }
 
   function funcClear() {
     setTxt("");
 
     showAlert("Cleared Text-area");
-    setTimeout(() => {
-      showAlert(null);
-    }, 1500);
+    dismissAlert();
   }
 
   function funcCopy() {
     navigator.clipboard.writeText(textArea.current.value);
     showAlert("Copied to clip board");
-    setTimeout(() => {
-      showAlert(null);
-    }, 1500);
+    dismissAlert();
   }
 
   function funcRemoveExtraSpace() {
@@ -61,9 +59,7 @@ const Textarea = () => {
     setTxt(newTxt.join(" "));
 
     showAlert("Removed Extra spaces");
-    setTimeout(() => {
-      showAlert(null);
-    }, 1500);
+    dismissAlert();
   }
 
   useEffect(() => {
@@ -138,7 +134,7 @@ const Textarea = () => {
               style={{
                 whiteSpace: "pre-wrap",
                 wordWrap: "break-word",
-                marginBottom: "30px"
+                marginBottom: "30px",
               }}
             >
               {txt.length > 0 ? element : "Nothing to preview"}

@@ -1,27 +1,31 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import NoteContext from "./noteContext";
-import AlertContext from "./AlertContext";
 
 const NoteState = (props) => {
-  const { showAlert } = useContext(AlertContext);
+  const [alert, setAlert] = useState(null);
   const [darkMode, setDarkMode] = useState(false);
 
   const darkState = {
     darkMode: darkMode,
+    alert: alert,
+    showAlert: (message) => {
+      setAlert(message);
+    },
     toggleDarkMode: function toggleDarkMode() {
       setDarkMode((prevState) => {
         const newState = !prevState;
-
-        showAlert(`Switched to ${newState ? "Dark" : "Light"} Mode`);
-
-        document.title = `TextUtils - ${newState ? "Dark Mode" : "Light Mode"}`
+        console.log("before showing alert")
+        this.showAlert(
+          `Switched to ${newState ? "Dark" : "Light"} Mode`
+        );
+        console.log("after showing alert")
+        document.title = `TextUtils - ${newState ? "Dark Mode" : "Light Mode"}`;
 
         setTimeout(() => {
-          showAlert(null);
+          this.showAlert(null);
         }, 1500);
 
-        return(newState);
-
+        return newState;
       });
     },
   };

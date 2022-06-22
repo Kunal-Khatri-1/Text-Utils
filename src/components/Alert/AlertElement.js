@@ -16,4 +16,5 @@ export const AlertElem = styled.div`
     justify-content: center;
     color: whitesmoke;
     padding: 0 15px;
+    z-index: 999999;
 `

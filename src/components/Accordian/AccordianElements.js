@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const AccordianWrapper = styled.div`
   display: flex;
   min-height: calc(100vh - 60px);
-  padding: 40px 0px;
+  padding: 50px 0px;
   height: auto;
   width: 100vw;
   justify-content: center;

@@ -8,11 +8,9 @@ import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
 import Error from "./pages/Error";
 import NoteState from "./context/NoteState";
-import AlertState from "./context/AlertState";
 
 function App() {
   return (
-    <AlertState>
       <NoteState>
         <Router>
           <Routes>
@@ -26,7 +24,6 @@ function App() {
           </Routes>
         </Router>
       </NoteState>
-    </AlertState>
   );
 }
 

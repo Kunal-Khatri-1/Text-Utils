@@ -1,4 +1,5 @@
 import React from "react";
+import Alert from "../components/Alert/index.js";
 import Navbar from "../components/Navbar/index.js";
 import Wrapper from "../components/Wrapper/WrapperElement.js";
 
@@ -6,6 +7,7 @@ const Error = () => {
   return (
     <>
       <Navbar />
+      <Alert />
       <Wrapper>
         <div
           style={{
