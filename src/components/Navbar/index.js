@@ -51,8 +51,8 @@ const Navbar = () => {
           </NavLink>
           <Bars onClick={funcShowNav}/>
           <NavMenu ref={navMenu}>
+            <NavLink to="/">Home</NavLink>
             <NavLink to="/about">About</NavLink>
-            <NavLink to="/services">Services</NavLink>
             <NavLink to="/contact-us">Contact Us</NavLink>
             <NavLink to="/sign-up">Sign up</NavLink>
             <NavBtn>
